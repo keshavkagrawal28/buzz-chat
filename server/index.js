@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use('/api', routes);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.SERVER_PORT || 8080;
 
 const server = app.listen(
   PORT,
