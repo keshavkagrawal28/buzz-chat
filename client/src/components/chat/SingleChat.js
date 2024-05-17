@@ -105,6 +105,10 @@ function SingleChat({ fetchAgain, setFetchAgain }) {
     socket.on('stop typing', () => {
       setIsTyping(false);
     });
+
+    return () => {
+      socket.disconnect();
+    };
   }, []);
 
   useEffect(() => {
